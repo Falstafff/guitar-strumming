@@ -1,5 +1,5 @@
 import './styles.css';
-import {useState} from "react";
+import {ReactNode, useState} from "react";
 
 function PlayButton({ onPlay, children }: PlayButtonProps) {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -19,6 +19,6 @@ function PlayButton({ onPlay, children }: PlayButtonProps) {
     )
 }
 
-type PlayButtonProps = { onPlay: (isPlaying: boolean) => void, children};
+type PlayButtonProps = { onPlay: (isPlaying: boolean) => void, children: ReactNode};
 
 export default PlayButton;

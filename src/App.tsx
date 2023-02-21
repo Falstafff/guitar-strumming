@@ -65,26 +65,28 @@ function App() {
     const  guitarPlayer = new GuitarPlayer();
 
     return (
-        data.map(({name, bpm, noteLength,  bars, signature}, index) => {
-            const rhythmMachine = new RhythmMachine(
-                bpm,
-                signature,
-                bars.length,
-                noteLength
-            );
+        <>
+            {data.map(({name, bpm, noteLength,  bars, signature}, index) => {
+                const rhythmMachine = new RhythmMachine(
+                    bpm,
+                    signature,
+                    bars.length,
+                    noteLength
+                );
 
-            return (
-                <Strumming
-                    name={name}
-                    bpm={bpm}
-                    noteLength={noteLength}
-                    externalBars={bars}
-                    guitarPlayer={guitarPlayer}
-                    rhythmMachine={rhythmMachine}
-                    key={index}
-                />
-            )
-        })
+                return (
+                    <Strumming
+                        name={name}
+                        bpm={bpm}
+                        noteLength={noteLength}
+                        externalBars={bars}
+                        guitarPlayer={guitarPlayer}
+                        rhythmMachine={rhythmMachine}
+                        key={index}
+                    />
+                )
+            })}
+        </>
     )
 }
 

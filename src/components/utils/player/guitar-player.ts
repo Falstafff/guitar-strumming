@@ -1,6 +1,6 @@
 import {AbstractPlayer} from "./abstract-player";
 import {Beat} from "../../../common/types";
-import Soundfont from "soundfont-player";
+import Soundfont, {InstrumentName} from "soundfont-player";
 
 export class GuitarPlayer extends AbstractPlayer {
     public play(notes: string[], beat: Beat): void {
@@ -22,6 +22,6 @@ export class GuitarPlayer extends AbstractPlayer {
 
     protected async prepareAudio(): Promise<void> {
         this.context = new AudioContext();
-        this.player = await Soundfont.instrument(this.context, '/sound/acoustic_guitar_steel-mp3.js');
+        this.player = await Soundfont.instrument(this.context, '/sound/acoustic_guitar_steel-mp3.js' as InstrumentName);
     }
 }

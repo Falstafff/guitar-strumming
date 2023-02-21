@@ -6,8 +6,8 @@ function Header({onPlay, bpm, name}: { onPlay: (isPlaying: boolean) => void, bpm
         <header className="strumming-header">
             <PlayButton onPlay={onPlay}>
                 <span className="btn-info">
-                    <spna className="name">{name}</spna>
-                    <spna className="bpm">{bpm} bpm</spna>
+                    <span className="name">{name}</span>
+                    <span className="bpm">{bpm} bpm</span>
                 </span>
             </PlayButton>
         </header>
