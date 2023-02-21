@@ -3,6 +3,8 @@ import {TimeSignature} from "./components/utils/time-signature";
 import {GuitarPlayer} from "./components/utils/player/guitar-player";
 import {RhythmMachine} from "./components/utils/rhythm-machine";
 import {Bar} from "./common/types";
+import Soundfont from 'soundfont-player';
+
 
 function App() {
   const bpm = 80;
@@ -12,25 +14,13 @@ function App() {
   const bars = [
     {
       '0': {
-        direction: 'up-down',
-        accent: 'high'
-      },
-      '0.5': {
         direction: 'down-up',
-        accent: 'low'
-      },
-      '1': {
-        direction: 'up-down',
         accent: 'high'
       },
       '2': {
         direction: 'muted',
         accent: 'low',
-      },
-      '3': {
-        direction: 'down-up',
-        accent: 'low',
-      },
+      }
     }
   ] as Bar[]
 

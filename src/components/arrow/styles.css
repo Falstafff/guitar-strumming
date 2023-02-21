@@ -4,7 +4,8 @@
     height: 40px;
 }
 
-.arrow svg {
+.arrow svg .cls-1, .arrow svg .cls-2, .arrow svg .cls-1 {
+    fill: #1a1a1a;
     width: 20px;
     height: 40px;
 }

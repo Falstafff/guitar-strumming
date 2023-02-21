@@ -5,7 +5,6 @@ export type ArrowDirection = 'up-down' | 'down-up' | 'pause' | 'muted'
 export type Beat = {
     accent: AccentStrength,
     direction: ArrowDirection,
-    muted: boolean,
     current?: boolean
 }
 

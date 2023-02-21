@@ -1,7 +1,9 @@
 import {Beat} from "../../../common/types";
+import {Player} from "soundfont-player";
 
 export abstract class AbstractPlayer {
-    private _audioNodes: Record<string, any>;
+    protected context: AudioContext;
+    protected player: Player;
 
     protected constructor() {
         this.prepareAudio();
@@ -11,15 +13,15 @@ export abstract class AbstractPlayer {
 
     protected abstract prepareAudio(): void;
 
-    public getAudioNote(note: string) {
-        return this._audioNodes[note];
-    }
-
-    public hasAudioNote(note: string): boolean {
-        return !!this._audioNodes[note]
-    }
-
-    public set audioNotes(audioNotes: Record<any, any>) {
-        this._audioNodes = audioNotes;
-    }
+    // public getAudioNote(note: string) {
+    //     return this._audioNodes[note];
+    // }
+    //
+    // public hasAudioNote(note: string): boolean {
+    //     return !!this._audioNodes[note]
+    // }
+    //
+    // public set audioNotes(audioNotes: Record<any, any>) {
+    //     this._audioNodes = audioNotes;
+    // }
 }

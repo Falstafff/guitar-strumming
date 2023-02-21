@@ -1,12 +1,11 @@
 import {useEffect, useState} from "react";
-import Bars from "../bars";
 import Header from "../header";
 import {Bar, Beat} from "../../common/types";
 import {GuitarPlayer} from "../utils/player/guitar-player";
 import {RhythmMachine} from "../utils/rhythm-machine";
 import {getResetBarsCurrent, getSetCurrentBars} from "./utils";
-import './styles.css';
 import Beats from "../beats";
+import './styles.css';
 
 function Strumming({externalBars, rhythmMachine, guitarPlayer, bpm, noteLength}: StrummingProps) {
     const [bars, setBars] = useState(externalBars as Bar[]);
@@ -19,7 +18,7 @@ function Strumming({externalBars, rhythmMachine, guitarPlayer, bpm, noteLength}:
 
             if (beat) {
                 setBars(getSetCurrentBars(bars, beatIndex));
-                guitarPlayer.play(['A2', 'E3', 'A3', 'E3', 'A3'], beat);
+                guitarPlayer.play(['A2', 'E3', 'A3', 'C#3'], beat);
             }
         }
     })
