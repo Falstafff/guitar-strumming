@@ -1,13 +1,16 @@
 .arrow {
     display: inline-block;
-    width: 20px;
-    height: 40px;
+    min-width: 18px;
+    min-height: 40px;
+}
+
+.arrow svg {
+    width: 18px;
+    height: 34px;
 }
 
 .arrow svg .cls-1, .arrow svg .cls-2, .arrow svg .cls-1 {
     fill: #1a1a1a;
-    width: 20px;
-    height: 40px;
 }
 
 .arrow.current .cls-1, .arrow.current .cls-2, .arrow.current .cls-3 g path {

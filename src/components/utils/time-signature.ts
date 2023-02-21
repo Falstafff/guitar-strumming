@@ -1,7 +1,7 @@
 export class TimeSignature {
-    private _top: number;
-    private _bottom: number;
-    private _signature: string;
+    private _top: number = 0;
+    private _bottom: number = 0;
+    private _signature: string = '4/4'
 
     constructor(signature: string = '4/4') {
         this.signature = signature;
@@ -23,7 +23,7 @@ export class TimeSignature {
         return this._top / this._bottom;
     }
 
-    set signature(signature: string) {
+    public set signature(signature: string) {
         if (!/^\d+\/\d+$/.test(signature)) {
             throw new Error('Wrong time signature formatting')
         }

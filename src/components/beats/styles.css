@@ -2,16 +2,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 5px 0;
 }
 
 .beats-container .arrows {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
 .beats-container .notes {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
 .notes div {

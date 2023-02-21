@@ -16,8 +16,12 @@ export class GuitarPlayer extends AbstractPlayer {
         }
     }
 
+    public stop(): void {
+        this.player.stop(this.context.currentTime);
+    }
+
     protected async prepareAudio(): Promise<void> {
         this.context = new AudioContext();
-        this.player = await Soundfont.instrument(this.context, 'acoustic_guitar_steel');
+        this.player = await Soundfont.instrument(this.context, '/sound/acoustic_guitar_steel-mp3.js');
     }
 }

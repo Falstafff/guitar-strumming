@@ -7,7 +7,7 @@ import {getResetBarsCurrent, getSetCurrentBars} from "./utils";
 import Beats from "../beats";
 import './styles.css';
 
-function Strumming({externalBars, rhythmMachine, guitarPlayer, bpm, noteLength}: StrummingProps) {
+function Strumming({name,  bpm, noteLength, externalBars, rhythmMachine, guitarPlayer }: StrummingProps) {
     const [bars, setBars] = useState(externalBars as Bar[]);
 
     useEffect(() => {
@@ -18,10 +18,10 @@ function Strumming({externalBars, rhythmMachine, guitarPlayer, bpm, noteLength}:
 
             if (beat) {
                 setBars(getSetCurrentBars(bars, beatIndex));
-                guitarPlayer.play(['A2', 'E3', 'A3', 'C#3'], beat);
+                guitarPlayer.play(["A2", "C#3", "E3", "A3", "A2"], beat);
             }
         }
-    })
+    }, []);
 
     const onPlay = (isPlaying: boolean): void => {
         if (isPlaying) {
@@ -30,12 +30,13 @@ function Strumming({externalBars, rhythmMachine, guitarPlayer, bpm, noteLength}:
         }
 
         rhythmMachine.reset();
+        guitarPlayer.stop();
         setBars(getResetBarsCurrent(bars))
     }
 
     return (
         <div className="strumming-container">
-            <Header bpm={bpm} onPlay={onPlay}/>
+            <Header name={name} bpm={bpm} onPlay={onPlay}/>
             <Beats bars={bars} noteLength={noteLength} />
         </div>
     )
@@ -45,6 +46,7 @@ type StrummingProps = {
     bpm: number,
     noteLength: number,
     externalBars: Bar[],
+    name: string,
     rhythmMachine: RhythmMachine,
     guitarPlayer: GuitarPlayer
 }

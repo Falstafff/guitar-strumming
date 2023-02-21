@@ -1,18 +1,18 @@
+import {TimeSignature} from "./time-signature";
+
 export type OnPlay = (currentTime: number, currentBeat: number, currentBar: number) => void;
 
-export type TimeSignature = { top: number, bottom: number };
-
 export class RhythmMachine {
-    private _bpm: number;
-    private bps: number;
-    private _timeSignature: TimeSignature;
-    private currentTime: number;
-    private interval: number;
-    private currentBar: number;
-    private currentBeat: number;
-    private readonly maxDuration: number;
-    private readonly minDuration: number;
-    private readonly totalBars: number;
+    private _bpm: number = 60;
+    private bps: number = 60/60;
+    private _timeSignature: TimeSignature = new TimeSignature('4/4');
+    private currentTime: number = 0;
+    private interval: number = 0;
+    private currentBar: number = 0;
+    private currentBeat: number = 0;
+    private readonly maxDuration: number = 0;
+    private readonly minDuration: number = 0;
+    private readonly totalBars: number = 0;
 
     private _onPlay: OnPlay = () => {};
 

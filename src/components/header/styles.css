@@ -3,3 +3,15 @@
     align-content: center;
     align-items: center;
 }
+
+.btn-info .bpm   {
+    color: #929292;
+    font-weight: 400;
+}
+
+.btn-info .name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #212121;
+    padding: 0 4px;
+}

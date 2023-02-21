@@ -28,7 +28,6 @@ function Beats({bars, noteLength}: { bars: Bar[], noteLength: number }) {
                         <Arrow
                             direction={noteBeat.beat.direction}
                             isCurrent={noteBeat.beat.current ?? false}
-                            isMuted={noteBeat.beat.muted}
                         />
                     </div>
                 ))}

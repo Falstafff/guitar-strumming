@@ -8,10 +8,10 @@ function Arrow({direction, isCurrent = false}: ArrowProps) {
         'up-down': Arrows.ArrowUpDown,
         'down-up': Arrows.ArrowDownUp,
         'muted': Arrows.ArrowMuted,
-        'pause': () => ''
+        'pause': () => <></>
     }
 
-    const DirectionArrow = arrows[direction] ?? {};
+    const DirectionArrow = arrows[direction] ?? null;
 
     return (
         <div className={classNames(['arrow'], { current: isCurrent })}>
