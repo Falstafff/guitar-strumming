@@ -1,0 +1,11 @@
+.accent {
+    display: block;
+    height: 20px;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.accent.current {
+    color: #FF5D55;
+}

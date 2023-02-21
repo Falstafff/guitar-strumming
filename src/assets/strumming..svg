@@ -1,0 +1,10 @@
+<svg width="68" height="40" viewBox="0 0 68 40" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g transform="translate(1 1)"><rect fill="#000" x="3" width="1" height="17" rx=".5"/><path fill="#212121" d="M3.5 18.444L0 13h7z"/></g><g transform="matrix(1 0 0 -1 9 19)"><rect fill="#000" x="3" width="1" height="17" rx=".5"/><path fill="#212121" d="M3.5 18.444L0 13h7z"/></g><g fill="#FF5D55"><path d="M20.5 1a.5.5 0 0 1 .5.5v16a.5.5 0 1 1-1 0v-16a.5.5 0 0 1 .5-.5z"/><path d="M20.5 19.444L17 14h7z"/></g><g transform="matrix(1 0 0 -1 25 19)" fill="#FF5D55"><rect x="3" width="1" height="17" rx=".5"/><path d="M3.5 18.444L0 13h7z"/></g><path d="M37.5 14.5l-2-2m0 4l2-2" stroke="#212121" stroke-width="1.01" stroke-linecap="round" stroke-linejoin="bevel"/><path d="M45.5 14.5l-2-2m0 4l2-2" stroke="#FF5D55" stroke-width="1.01" stroke-linecap="round" stroke-linejoin="bevel"/><path d="M38.5 8.5l-4-4m0 4l4-4" stroke="#212121" stroke-width="1.01" stroke-linecap="round" stroke-linejoin="bevel"/><g stroke-linecap="round" stroke-linejoin="bevel"><path d="M55.5 13.5l-6-6m0 6l6-6" stroke="#212121"/><path d="M65.5 13.5l-6-6m0 6l6-6" stroke="#FF5D55"/></g><path d="M46.5 8.5l-4-4m0 4l4-4" stroke="#FF5D55" stroke-width="1.01" stroke-linecap="round" stroke-linejoin="bevel"/></g>
+    <g>
+        <rect fill="#212121" x="1" y="29.5" width="2" height="7" />
+        <rect fill="#212121" x="5" y="29.5" width="2" height="7" />
+    </g>
+    <g>
+        <rect fill="#FF5D55" x="9" y="29.5" width="2" height="7" />
+        <rect fill="#FF5D55" x="13" y="29.5" width="2" height="7" />
+    </g>
+</svg>

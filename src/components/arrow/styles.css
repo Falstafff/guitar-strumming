@@ -1,0 +1,14 @@
+.arrow {
+    display: inline-block;
+    width: 20px;
+    height: 40px;
+}
+
+.arrow svg {
+    width: 20px;
+    height: 40px;
+}
+
+.arrow.current .cls-1, .arrow.current .cls-2, .arrow.current .cls-3 g path {
+    fill: #FF5D55!important;
+}

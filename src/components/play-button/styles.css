@@ -1,0 +1,14 @@
+.btn-play {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 2px;
+    font-size: 12px;
+    background-color: white;
+}
+
+.btn-play span {
+    padding-left: 5px;
+}

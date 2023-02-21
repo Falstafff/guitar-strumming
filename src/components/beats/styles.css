@@ -1,0 +1,62 @@
+.beats-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.beats-container .arrows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.beats-container .notes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.notes div {
+    min-width: 18px;
+    position: relative;
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 10px;
+}
+
+.notes > div:after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    border: 1px solid;
+    border-width: 0 0 0 1px;
+    height: 5px;
+    left: 9px;
+    width: 4px;
+}
+
+.notes.eight > div:after {
+    border-width: 0 0 1px 1px;
+}
+
+.notes.eight > div:nth-child(2n):after {
+     border-width: 0 1px 1px 0;
+     left: -8px;
+     width: 100%;
+ }
+
+.notes.sixteen > div:after {
+    background: -webkit-linear-gradient(currentColor,currentColor) 0 6px no-repeat;
+    background-size: 100% 2px;
+    border: 1px solid;
+    border-width: 0 0 2px 1px;
+    height: 9px;
+    left: 9px;
+    top: 13px;
+    width: 4px;
+}
+
+.notes.sixteen > div:nth-child(2n):after {
+    border-width: 0 1px 2px 0;
+    left: -8px;
+    width: 100%;
+}
