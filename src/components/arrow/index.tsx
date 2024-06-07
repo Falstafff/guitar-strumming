@@ -5,7 +5,7 @@ import './styles.css';
 
 function Arrow({direction, isCurrent = false}: ArrowProps) {
     const arrows = {
-        'up-down': Arrows.ArrowUpDown,
+        'top-down': Arrows.ArrowUpDown,
         'down-up': Arrows.ArrowDownUp,
         'muted': Arrows.ArrowMuted,
         'pause': () => <></>

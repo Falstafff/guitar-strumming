@@ -10,7 +10,7 @@ export class GuitarPlayer extends AbstractPlayer {
         for (const noteIndex in currentNotes) {
             const note = notes[noteIndex];
             this.player.play(note, this.context.currentTime, {
-                sustain: beat.direction === "muted" ? .1 : .5,
+                sustain: beat.direction === 'muted' ? .1 : .5,
                 gain: beat.accent === 'high' ? 1 : .6
             });
         }

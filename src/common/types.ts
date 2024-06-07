@@ -1,11 +1,12 @@
 export type AccentStrength = 'low' | 'high';
 
-export type ArrowDirection = 'up-down' | 'down-up' | 'pause' | 'muted'
+export type ArrowDirection = 'top-down' | 'down-up' | 'pause' | 'muted'
 
 export type Beat = {
     accent: AccentStrength,
     direction: ArrowDirection,
-    current?: boolean
+    current?: boolean,
+    chord?: string[]
 }
 
 export type Bar = {

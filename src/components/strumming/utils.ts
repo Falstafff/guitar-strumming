@@ -1,4 +1,4 @@
-import {Bar} from "../../common/types";
+import {Bar, Beat} from "../../common/types";
 
 export const getResetBarsCurrent = (bars: Bar[]): Bar[] => bars.map(bar => {
     for (const beatKey in bar) {
@@ -9,15 +9,14 @@ export const getResetBarsCurrent = (bars: Bar[]): Bar[] => bars.map(bar => {
     return bar;
 });
 
-export const getSetCurrentBars = (bars: Bar[], beatIndex: number): Bar[] => bars.map(bar => {
+export const getSetCurrentBars = (bars: Bar[], currentBeat: Beat): Bar[] => {
+  for (const bar of bars) {
     for (const beatKey in bar) {
-        const beat = bar[beatKey];
-        beat.current = false;
+      bar[beatKey].current = false;
     }
+  }
 
-    if (bar[beatIndex]) {
-        bar[beatIndex].current = true;
-    }
+  currentBeat.current = true;
 
-    return bar;
-})
+  return [...bars];
+}
