@@ -1,4 +1,4 @@
-import {TimeSignature} from "./time-signature";
+import {TimeSignature} from "../../common/types";
 
 export type OnEmmitTime = (currentBar: number, currentBeat: number) => void;
 

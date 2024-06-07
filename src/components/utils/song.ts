@@ -1,4 +1,4 @@
-import {TimeSignature} from "./time-signature";
+import {TimeSignature} from "../../common/types";
 
 export class Song {
     private readonly _bars: any[];

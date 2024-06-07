@@ -17,3 +17,8 @@ export type NoteBeat = {
     symbol: string,
     beat: Beat,
 }
+
+export type TimeSignature = {
+  beatsPerMeasure: number,
+  noteValue: number
+}
